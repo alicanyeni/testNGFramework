@@ -31,7 +31,7 @@ public abstract class TestBaseBeforeClassAfterClass {
 
     @AfterClass
     public void tearDown() {
-        //driver.quit();
+        driver.quit();
     }
 
 }
