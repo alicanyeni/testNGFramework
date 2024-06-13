@@ -9,7 +9,6 @@ public class AmazonPage {
     public AmazonPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
     @FindBy(xpath = "//*[@id='sp-cc-rejectall-link']")
     public WebElement cookie;
 
