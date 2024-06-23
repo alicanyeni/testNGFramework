@@ -17,7 +17,7 @@ public class C05_SmokeNegatifTest {
     //Email,Password,Login elementlerini locate ediniz
     //Degerleri girildiginde sayfaya girilemedigini test et
     //Sayfayı kapatınız
-    @Test
+    @Test(groups = "grup1")
     public void yanlisKulllanici() throws InterruptedException {
         Driver.getDriver().get(ConfigReader.getProperty("aloTechURL"));
         aloTechPage.email.sendKeys(ConfigReader.getProperty("wrongUser"));

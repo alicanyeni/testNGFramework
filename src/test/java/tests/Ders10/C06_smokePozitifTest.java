@@ -13,7 +13,7 @@ public class C06_smokePozitifTest {
 
     BrcPage brcPage = new BrcPage();
 
-    @Test
+    @Test(groups = "grup1")
     public void smokePozitiveTest() throws InterruptedException {
         Driver.getDriver().get(ConfigReader.getProperty("BrcUrl"));
         brcPage.loginButton.click();

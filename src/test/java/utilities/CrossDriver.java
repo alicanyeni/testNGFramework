@@ -7,16 +7,17 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
 
-public class Driver {
-
-    private Driver(){
+public class CrossDriver {
+    private CrossDriver() {
 
     }
+
     static WebDriver driver;
 
-    public static WebDriver getDriver() {
+    public static WebDriver getDriver(String browser) {
+        browser = browser == null ? ConfigReader.getProperty("browser") : browser;
         if (driver == null) {
-            switch (ConfigReader.getProperty("browser")) {
+            switch (browser) {
 
                 case "chrome":
                     driver = new ChromeDriver();
